@@ -1,7 +1,59 @@
 {
   "products": [
-    { "id": 1, "name": "Laptop", "price": 1000 },
-    { "id": 2, "name": "Phone", "price": 500 },
-    { "id": 3, "name": "Tablet", "price": 300 }
+    {
+      "id": 1,
+      "product_name": "Giày Thể Thao Nike Air Max",
+      "price": 2500000,
+      "description": "Giày chạy bộ nhẹ, êm chân, thiết kế thời trang.",
+      "category": "Giày thể thao",
+      "stock": 20,
+      "image": "https://bizweb.dktcdn.net/100/340/361/products/thiet-ke-chua-co-ten-2024-08-26t155637-239.png?v=1724662728957"
+    },
+    {
+      "id": 2,
+      "product_name": "Giày Sneaker Adidas Ultraboost",
+      "price": 3000000,
+      "description": "Công nghệ đệm Boost cao cấp, phù hợp cả đi học lẫn đi chơi.",
+      "category": "Giày thể thao",
+      "stock": 15,
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cd9e7e98e18243b6948baa25cf49de43_9366/Ultraboost_5x_Shoes_White_IH3103_HM3_hover.jpg"
+    },
+    {
+      "id": 3,
+      "product_name": "Dép Quai Ngang Nam Biti's",
+      "price": 180000,
+      "description": "Dép cao su bền, êm chân, dùng trong nhà hoặc ngoài trời.",
+      "category": "Dép nam",
+      "stock": 50,
+      "image": "https://vimmart.com/cdn/shop/files/BDM001477DEN_1.jpg?v=1715681567"
+    },
+    {
+      "id": 4,
+      "product_name": "Giày Cao Gót Nữ 7cm",
+      "price": 450000,
+      "description": "Giày cao gót thời trang, phù hợp đi làm, dạo phố hoặc tiệc tùng.",
+      "category": "Giày nữ",
+      "stock": 10,
+      "image": "https://pos.nvncdn.com/205d8e-20707/ps/20240509_gnDIUy51My.jpeg"
+    },
+    {
+      "id": 5,
+      "product_name": "Sandal Nữ Quai Chéo",
+      "price": 320000,
+      "description": "Phong cách Hàn Quốc, thoáng mát cho mùa hè.",
+      "category": "Dép nữ",
+      "stock": 25,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw2xMc7zUIBscVV9L6CrUUE74Jht7hYj9paQ&s"
+    },
+    {
+      "id": 6,
+      "product_name": "Giày Tây Nam Da Bò",
+      "price": 850000,
+      "description": "Chất liệu da bò thật, phong cách lịch lãm cho công sở.",
+      "category": "Giày tây nam",
+      "stock": 8,
+      "image": "https://decistore.vn/wp-content/uploads/2019/09/DB-14-2.jpg"
+    }
   ]
 }
+
