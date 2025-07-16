@@ -39,7 +39,7 @@ const ProductList = () => {
       title: "Tên sản phẩm",
       dataIndex: "product_name",
       key: "name",
-      // sorter: (a: Product, b: Product) => a.name.localeCompare(b.name), 
+      // sorter: (a: Product, b: Product) => a.name.localeCompare(b.name),
     },
     {
       title: "Image",
@@ -65,32 +65,22 @@ const ProductList = () => {
       key: "description",
     },
     {
-    title: "Hành động",
-    key: "action",
-    render: (_: any, record: Product) => (
-      <div style={{ display: 'flex', gap: 8 }}>
-        <Button type="link">Sửa</Button>
-        <Button type="link" danger >Xóa</Button>
-      </div>
-    ),
-  },
+      title: "Hành động",
+      key: "action",
+      render: (_: any, record: Product) => (
+        <div style={{ display: "flex", gap: 8 }}>
+          <Button type="link">Sửa</Button>
+          <Button type="link" danger>
+            Xóa
+          </Button>
+        </div>
+      ),
+    },
   ];
   return (
     <>
       <div>
-        <h2>Danh sách sản phẩm</h2>
-        <Button
-          type="primary"
-          onClick={() => refetch()}
-          style={{ marginBottom: 16 }}
-          disabled={isLoading}
-        >
-          Làm mới dữ liệu
-        </Button>
-         <Button
-          type="dashed"
-          style={{marginLeft: 16}}
-        >
+        <Button type="dashed" style={{ margin: 20 }}>
           Thêm sản phẩm
         </Button>
         <Table

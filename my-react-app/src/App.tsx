@@ -4,6 +4,8 @@ import { ClientLayout } from "./layouts/ClientLayout";
 import AdminLayout from "./layouts/AdminLayout";
 import ProductList from "./pages/admin/ProductList";
 import CategoryList from "./pages/admin/CategoryList";
+import UserList from "./pages/admin/UserList";
+import BrandList from "./pages/admin/BrandList";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path="categories" element={<CategoryList />} />
             {/* <Route path="category/add" element={<CategoryAdd />} />
             <Route path="category/:id" element={<CategoryUpdate />} /> */}
+            <Route path="users" element={<UserList />} />
+            <Route path="brands" element={<BrandList />} />
           </Route>
         </Routes>
       </Router>

@@ -56,36 +56,36 @@
     }
   ],
   "brands": [
-    [
+    
       {
         "id": 1,
         "name": "Nike",
-        "logo": "https://example.com/logo/nike.png",
+        "logo": "https://inkythuatso.com/uploads/images/2021/11/logo-nike-inkythuatso-2-01-04-15-42-44.jpg",
         "country": "USA",
         "founded": 1964
       },
       {
         "id": 2,
         "name": "Adidas",
-        "logo": "https://example.com/logo/adidas.png",
+        "logo": "https://saigonsneaker.com/wp-content/uploads/2020/01/adidas-3-la.jpg",
         "country": "Germany",
         "founded": 1949
       },
       {
         "id": 3,
         "name": "Vans",
-        "logo": "https://example.com/logo/vans.png",
+        "logo": "https://drake.vn/image/catalog/H%C3%ACnh%20content/logo-vans/vans-logo_2.jpg",
         "country": "USA",
         "founded": 1966
       },
       {
         "id": 4,
         "name": "Bitis",
-        "logo": "https://example.com/logo/bitis.png",
+        "logo": "https://i.pinimg.com/736x/e9/47/14/e9471439ec9b636be81a7d43ad23e540.jpg",
         "country": "Vietnam",
         "founded": 1982
       }
-    ]
+    
   ],
   "categories": [
     {
@@ -122,22 +122,19 @@
       "id": 1,
       "name": "Nguyen Van A",
       "password": "123456",
-      "age": 25,
-      "role": "admin"
+      "age": 25
     },
     {
       "id": 2,
       "name": "Le Thi B",
       "password": "matkhau123",
-      "age": 22,
-      "role": "user"
+      "age": 22
     },
     {
       "id": 3,
       "name": "Tran Van C",
       "password": "giaydep2024",
-      "age": 30,
-      "role": "staff"
+      "age": 30
     }
   ]
 }
