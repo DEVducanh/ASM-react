@@ -54,6 +54,90 @@
       "stock": 8,
       "image": "https://decistore.vn/wp-content/uploads/2019/09/DB-14-2.jpg"
     }
+  ],
+  "brands": [
+    [
+      {
+        "id": 1,
+        "name": "Nike",
+        "logo": "https://example.com/logo/nike.png",
+        "country": "USA",
+        "founded": 1964
+      },
+      {
+        "id": 2,
+        "name": "Adidas",
+        "logo": "https://example.com/logo/adidas.png",
+        "country": "Germany",
+        "founded": 1949
+      },
+      {
+        "id": 3,
+        "name": "Vans",
+        "logo": "https://example.com/logo/vans.png",
+        "country": "USA",
+        "founded": 1966
+      },
+      {
+        "id": 4,
+        "name": "Bitis",
+        "logo": "https://example.com/logo/bitis.png",
+        "country": "Vietnam",
+        "founded": 1982
+      }
+    ]
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Giày thể thao",
+      "image": "https://example.com/images/sport-shoes.jpg",
+      "description": "Giày sneaker, running, gym,...",
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Giày tây",
+      "image": "https://example.com/images/leather-shoes.jpg",
+      "description": "Giày da nam, lịch sự, công sở",
+      "status": true
+    },
+    {
+      "id": 3,
+      "name": "Dép",
+      "image": "https://example.com/images/slippers.jpg",
+      "description": "Dép quai ngang, dép xỏ ngón, dép đi trong nhà",
+      "status": true
+    },
+    {
+      "id": 4,
+      "name": "Giày cao gót",
+      "image": "https://example.com/images/high-heels.jpg",
+      "description": "Giày cao gót nữ thời trang",
+      "status": true
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Nguyen Van A",
+      "password": "123456",
+      "age": 25,
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Le Thi B",
+      "password": "matkhau123",
+      "age": 22,
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "name": "Tran Van C",
+      "password": "giaydep2024",
+      "age": 30,
+      "role": "staff"
+    }
   ]
 }
-

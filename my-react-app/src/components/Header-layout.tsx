@@ -34,11 +34,8 @@ const HeaderLayout = () => {
           <Menu.Item key="users">
             <NavLink to="/admin/users">Người dùng</NavLink>
           </Menu.Item>
-          <Menu.Item key="orders">
-            <NavLink to="/admin/orders">Đơn hàng</NavLink>
-          </Menu.Item>
-          <Menu.Item key="slides">
-            <NavLink to="/admin/slides">Slide</NavLink>
+          <Menu.Item key="brands">
+            <NavLink to="/admin/brands">Thương hiệu</NavLink>
           </Menu.Item>
         </Menu>
       </div>
