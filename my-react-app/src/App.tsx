@@ -20,6 +20,7 @@ function App() {
 
           {/* ADMIN ROUTER */}
           <Route path="/admin" element={<AdminLayout />}>
+            <Route index element={<ProductList />} />
             <Route path="products" element={<ProductList />} />
             {/* <Route path="products/add" element={<ProductAdd />} />
             <Route path="products/:id" element={<ProductUpdate />} /> */}
