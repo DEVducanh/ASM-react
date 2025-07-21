@@ -1,38 +1,51 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import { ClientLayout } from "./layouts/ClientLayout";
 import AdminLayout from "./layouts/AdminLayout";
-import ProductList from "./pages/admin/ProductList";
+import ProductList from "./pages/admin/Products/ProductList";
 import CategoryList from "./pages/admin/CategoryList";
 import UserList from "./pages/admin/UserList";
 import BrandList from "./pages/admin/BrandList";
+import DashBoard from "./pages/admin/DashBoard";
+import ProductUpdate from "./pages/admin/Products/ProductUpdate";
+// import các page khác nếu có
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <ClientLayout />,
+    children: [
+      // { index: true, element: <Home /> },
+      // { path: "product/:id", element: <ProductDetail /> }
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLayout />,
+    children: [
+      { index: true, element: <Navigate to={"dashboard"} replace /> },
+      { path: "dashboard", element: <DashBoard /> },
+      { path: "products", element: <ProductList /> },
+      // { path: "products/add", element: <ProductAdd /> },
+      { path: "products/:id", element: <ProductUpdate /> },
+      { path: "categories", element: <CategoryList /> },
+      // { path: "category/add", element: <CategoryAdd /> },
+      // { path: "category/:id", element: <CategoryUpdate /> },
+      { path: "users", element: <UserList /> },
+      { path: "brands", element: <BrandList /> },
+    ],
+  },
+]);
 
 function App() {
   return (
-    <>
-      <Router>
-        <Routes>
-          {/* CLIENT ROUTER */}
-          <Route path="/" element={<ClientLayout />}>
-            {/* <Route index element={<Home />} />
-          <Route path="product/:id" element={<ProductDetail />} /> */}
-          </Route>
-
-          {/* ADMIN ROUTER */}
-          <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<ProductList />} />
-            <Route path="products" element={<ProductList />} />
-            {/* <Route path="products/add" element={<ProductAdd />} />
-            <Route path="products/:id" element={<ProductUpdate />} /> */}
-            <Route path="categories" element={<CategoryList />} />
-            {/* <Route path="category/add" element={<CategoryAdd />} />
-            <Route path="category/:id" element={<CategoryUpdate />} /> */}
-            <Route path="users" element={<UserList />} />
-            <Route path="brands" element={<BrandList />} />
-          </Route>
-        </Routes>
-      </Router>
-    </>
+    <div>
+      <RouterProvider router={router} />;
+    </div>
   );
 }
 

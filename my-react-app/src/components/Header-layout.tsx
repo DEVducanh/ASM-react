@@ -22,9 +22,12 @@ const HeaderLayout = () => {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["products"]}
+          defaultSelectedKeys={["dashboard"]}
           style={{ flexGrow: 1, justifyContent: "flex-end" }}
         >
+          <Menu.Item key="dashboard">
+            <NavLink to="/admin/dashboard">Trang chủ</NavLink>
+          </Menu.Item>
           <Menu.Item key="products">
             <NavLink to="/admin/products">Sản phẩm</NavLink>
           </Menu.Item>

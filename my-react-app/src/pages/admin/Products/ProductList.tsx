@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Button, Table } from "antd";
 import axios from "axios";
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface Product {
   id: number;
@@ -66,10 +67,11 @@ const ProductList = () => {
     },
     {
       title: "Hành động",
+      dataIndex: "id",
       key: "action",
       render: (_: any, record: Product) => (
         <div style={{ display: "flex", gap: 8 }}>
-          <Button type="link">Sửa</Button>
+          <Link to={`/admin/products/${record.id}`} type="link">Sửa</Link>
           <Button type="link" danger>
             Xóa
           </Button>
