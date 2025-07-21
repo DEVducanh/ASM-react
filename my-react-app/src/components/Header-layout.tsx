@@ -22,7 +22,6 @@ const HeaderLayout = () => {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["dashboard"]}
           style={{ flexGrow: 1, justifyContent: "flex-end" }}
         >
           <Menu.Item key="dashboard">

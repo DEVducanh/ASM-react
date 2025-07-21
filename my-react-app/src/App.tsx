@@ -7,7 +7,7 @@ import {
 import { ClientLayout } from "./layouts/ClientLayout";
 import AdminLayout from "./layouts/AdminLayout";
 import ProductList from "./pages/admin/Products/ProductList";
-import CategoryList from "./pages/admin/CategoryList";
+import CategoryList from "./pages/admin/Category/CategoryList";
 import UserList from "./pages/admin/UserList";
 import BrandList from "./pages/admin/BrandList";
 import DashBoard from "./pages/admin/DashBoard";

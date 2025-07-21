@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Button, Table } from "antd";
 import axios from "axios";
 import React from "react";
+import { useSearchParams } from "react-router-dom";
 
 interface ICategories {
   id: number;
@@ -17,6 +18,11 @@ const fetchCategories = async (): Promise<ICategories[]> => {
 };
 
 const CategoryList = () => {
+  const [searchParam, setSearchParam] = useSearchParams();
+  const category = searchParam.get("category");
+
+  const handleFilter = () => setSearchParam({ category: "Dép" });
+
   const {
     data: categories,
     isLoading,
@@ -73,6 +79,8 @@ const CategoryList = () => {
       <Button type="dashed" style={{ margin: 20 }}>
         Thêm sản phẩm
       </Button>
+      <button style={{display: "inline-block",backgroundColor: "white"}} onClick={handleFilter}>Lọc theo Dép</button>
+      <p style={{display: "inline-block",marginLeft: 20}}>Danh mục hiện tại: {category || "Không có"}</p>
       <Table
         dataSource={categories}
         rowKey={"id"}
