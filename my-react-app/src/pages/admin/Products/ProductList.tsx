@@ -13,12 +13,12 @@ interface Product {
   image: string;
 }
 
-const fetchProduct = async () => {
-  const res = await axios.get("http://localhost:3001/products");
-  return res.data;
-};
-
 const ProductList = () => {
+  const fetchProduct = async () => {
+    const res = await axios.get("http://localhost:3001/products");
+    return res.data;
+  };
+
   const {
     data: products,
     isLoading,
@@ -71,7 +71,9 @@ const ProductList = () => {
       key: "action",
       render: (_: any, record: Product) => (
         <div style={{ display: "flex", gap: 8 }}>
-          <Link to={`/admin/products/${record.id}`} type="link">Sửa</Link>
+          <Link to={`/admin/products/${record.id}`} type="link">
+            Sửa
+          </Link>
           <Button type="link" danger>
             Xóa
           </Button>
@@ -82,9 +84,13 @@ const ProductList = () => {
   return (
     <>
       <div>
-        <Button type="dashed" style={{ margin: 20 }}>
+        <Link
+          to={"/admin/products/create"}
+          type="dashed"
+          style={{ margin: 20 }}
+        >
           Thêm sản phẩm
-        </Button>
+        </Link>
         <Table
           dataSource={products}
           columns={columns}

@@ -1,43 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
-      "product_name": "Giày Thể Thao Nike Air Max",
-      "price": 2500000,
-      "description": "Giày chạy bộ nhẹ, êm chân, thiết kế thời trang.",
-      "category": "Giày thể thao",
-      "stock": 20,
-      "image": "https://bizweb.dktcdn.net/100/340/361/products/thiet-ke-chua-co-ten-2024-08-26t155637-239.png?v=1724662728957"
-    },
-    {
-      "id": 2,
-      "product_name": "Giày Sneaker Adidas Ultraboost",
-      "price": 3000000,
-      "description": "Công nghệ đệm Boost cao cấp, phù hợp cả đi học lẫn đi chơi.",
-      "category": "Giày thể thao",
-      "stock": 15,
-      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cd9e7e98e18243b6948baa25cf49de43_9366/Ultraboost_5x_Shoes_White_IH3103_HM3_hover.jpg"
-    },
-    {
-      "id": 3,
-      "product_name": "Dép Quai Ngang Nam Biti's",
-      "price": 180000,
-      "description": "Dép cao su bền, êm chân, dùng trong nhà hoặc ngoài trời.",
-      "category": "Dép nam",
-      "stock": 50,
-      "image": "https://vimmart.com/cdn/shop/files/BDM001477DEN_1.jpg?v=1715681567"
-    },
-    {
-      "id": 4,
-      "product_name": "Giày Cao Gót Nữ 7cm",
-      "price": 450000,
-      "description": "Giày cao gót thời trang, phù hợp đi làm, dạo phố hoặc tiệc tùng.",
-      "category": "Giày nữ",
-      "stock": 10,
-      "image": "https://pos.nvncdn.com/205d8e-20707/ps/20240509_gnDIUy51My.jpeg"
-    },
-    {
-      "id": 5,
+      "id": "5",
       "product_name": "Sandal Nữ Quai Chéo",
       "price": 320000,
       "description": "Phong cách Hàn Quốc, thoáng mát cho mùa hè.",
@@ -46,71 +10,96 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw2xMc7zUIBscVV9L6CrUUE74Jht7hYj9paQ&s"
     },
     {
-      "id": 6,
+      "id": "6",
       "product_name": "Giày Tây Nam Da Bò",
       "price": 850000,
       "description": "Chất liệu da bò thật, phong cách lịch lãm cho công sở.",
       "category": "Giày tây nam",
       "stock": 8,
       "image": "https://decistore.vn/wp-content/uploads/2019/09/DB-14-2.jpg"
+    },
+    {
+      "id": "4129",
+      "product_name": "Giày Nike airforce 1",
+      "price": 2000000,
+      "description": "Giày Bền chất lượng cao chính hãng",
+      "image": "https://cdn-images.farfetch-contents.com/19/30/28/51/19302851_42366110_600.jpg",
+      "category": "Giày thể thao",
+      "stock": true
+    },
+    {
+      "id": "afa1",
+      "product_name": "Giày Nike airforce 1",
+      "price": 111111111111111,
+      "description": "1111111",
+      "image": "https://cdn-images.farfetch-contents.com/19/30/28/51/19302851_42366110_600.jpg",
+      "category": "Giày tây",
+      "stock": true
+    },
+    {
+      "id": "373b",
+      "product_name": "Giày Nike airforce 1",
+      "price": 1111111,
+      "description": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "image": "https://nhasachphuongnam.com/images/detailed/217/dac-nhan-tam-bc.jpg",
+      "category": "Giày thể thao",
+      "stock": true
     }
   ],
   "brands": [
-    
-      {
-        "id": 1,
-        "name": "Nike",
-        "logo": "https://inkythuatso.com/uploads/images/2021/11/logo-nike-inkythuatso-2-01-04-15-42-44.jpg",
-        "country": "USA",
-        "founded": 1964
-      },
-      {
-        "id": 2,
-        "name": "Adidas",
-        "logo": "https://saigonsneaker.com/wp-content/uploads/2020/01/adidas-3-la.jpg",
-        "country": "Germany",
-        "founded": 1949
-      },
-      {
-        "id": 3,
-        "name": "Vans",
-        "logo": "https://drake.vn/image/catalog/H%C3%ACnh%20content/logo-vans/vans-logo_2.jpg",
-        "country": "USA",
-        "founded": 1966
-      },
-      {
-        "id": 4,
-        "name": "Bitis",
-        "logo": "https://i.pinimg.com/736x/e9/47/14/e9471439ec9b636be81a7d43ad23e540.jpg",
-        "country": "Vietnam",
-        "founded": 1982
-      }
-    
+    {
+      "id": "1",
+      "name": "Nike",
+      "logo": "https://inkythuatso.com/uploads/images/2021/11/logo-nike-inkythuatso-2-01-04-15-42-44.jpg",
+      "country": "USA",
+      "founded": 1964
+    },
+    {
+      "id": "2",
+      "name": "Adidas",
+      "logo": "https://saigonsneaker.com/wp-content/uploads/2020/01/adidas-3-la.jpg",
+      "country": "Germany",
+      "founded": 1949
+    },
+    {
+      "id": "3",
+      "name": "Vans",
+      "logo": "https://drake.vn/image/catalog/H%C3%ACnh%20content/logo-vans/vans-logo_2.jpg",
+      "country": "USA",
+      "founded": 1966
+    },
+    {
+      "id": "4",
+      "name": "Bitis",
+      "logo": "https://i.pinimg.com/736x/e9/47/14/e9471439ec9b636be81a7d43ad23e540.jpg",
+      "country": "Vietnam",
+      "founded": 1982
+    }
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Giày thể thao",
       "image": "https://example.com/images/sport-shoes.jpg",
       "description": "Giày sneaker, running, gym,...",
       "status": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Giày tây",
       "image": "https://example.com/images/leather-shoes.jpg",
       "description": "Giày da nam, lịch sự, công sở",
       "status": true
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Dép",
       "image": "https://example.com/images/slippers.jpg",
       "description": "Dép quai ngang, dép xỏ ngón, dép đi trong nhà",
       "status": true
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Giày cao gót",
       "image": "https://example.com/images/high-heels.jpg",
       "description": "Giày cao gót nữ thời trang",
@@ -119,22 +108,39 @@
   ],
   "user": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Nguyen Van A",
       "password": "123456",
       "age": 25
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Le Thi B",
       "password": "matkhau123",
       "age": 22
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Tran Van C",
       "password": "giaydep2024",
       "age": 30
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "title": "Giới thiệu về React",
+      "content": "React là thư viện JavaScript để xây dựng giao diện người dùng."
+    },
+    {
+      "id": 2,
+      "title": "Tìm hiểu về Node.js",
+      "content": "Node.js cho phép chạy JavaScript trên server."
+    },
+    {
+      "id": 3,
+      "title": "Sử dụng Axios trong React",
+      "content": "Axios là thư viện dùng để gọi API dễ dàng trong ứng dụng React."
     }
   ]
 }
