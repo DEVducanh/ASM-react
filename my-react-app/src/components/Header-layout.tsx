@@ -5,8 +5,34 @@ import { NavLink } from "react-router-dom";
 const { Header } = Layout;
 
 const HeaderLayout = () => {
+  const menuItems = [
+    {
+      key: "dashboard",
+      label: <NavLink to="/admin/dashboard">Trang chủ</NavLink>,
+    },
+    {
+      key: "products",
+      label: <NavLink to="/admin/products">Sản phẩm</NavLink>,
+    },
+    {
+      key: "brands",
+      label: <NavLink to="/admin/brands">Thương hiệu</NavLink>,
+    },
+    {
+      key: "categories",
+      label: <NavLink to="/admin/categories">Danh mục</NavLink>,
+    },
+    {
+      key: "users",
+      label: <NavLink to="/admin/users">Người dùng</NavLink>,
+    },
+    {
+      key: "posts",
+      label: <NavLink to="/admin/posts">Bài viết</NavLink>,
+    },
+  ];
   return (
-    <Header style={{ background: "#001529", padding: "0 40px" }}>
+   <Header style={{ background: "#001529", padding: "0 40px" }}>
       <div
         style={{
           display: "flex",
@@ -16,33 +42,15 @@ const HeaderLayout = () => {
           margin: "0 auto",
         }}
       >
-        <div style={{ color: "#fff", fontWeight: "bold", fontSize: 20 }}>
-          Quản lý Shop
+        <div style={{ color: "#fff", fontWeight: "bold", fontSize: 30 }}>
+          Admin
         </div>
         <Menu
           theme="dark"
           mode="horizontal"
+          items={menuItems}
           style={{ flexGrow: 1, justifyContent: "flex-end" }}
-        >
-          <Menu.Item key="dashboard">
-            <NavLink to="/admin/dashboard">Trang chủ</NavLink>
-          </Menu.Item>
-          <Menu.Item key="products">
-            <NavLink to="/admin/products">Sản phẩm</NavLink>
-          </Menu.Item>
-          <Menu.Item key="categories">
-            <NavLink to="/admin/categories">Danh mục</NavLink>
-          </Menu.Item>
-          <Menu.Item key="users">
-            <NavLink to="/admin/users">Người dùng</NavLink>
-          </Menu.Item>
-          <Menu.Item key="brands">
-            <NavLink to="/admin/brands">Thương hiệu</NavLink>
-          </Menu.Item>
-          <Menu.Item key="posts">
-            <NavLink to="/admin/posts">Bài viết</NavLink>
-          </Menu.Item>
-        </Menu>
+        />
       </div>
     </Header>
   );

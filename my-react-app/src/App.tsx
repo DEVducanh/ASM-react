@@ -14,14 +14,23 @@ import DashBoard from "./pages/admin/DashBoard";
 import ProductUpdate from "./pages/admin/Products/ProductUpdate";
 import ProductCreate from "./pages/admin/Products/ProductCreate";
 import PostList from "./pages/admin/Post/PostList";
+import Home from "./pages/client/Home";
+import BrandCreate from "./pages/admin/Brand/BrandCreate";
+import BrandUpdate from "./pages/admin/Brand/BrandUpdate";
+import CategoryCreate from "./pages/admin/Category/CategoryCreate";
+import CategoryUpdate from "./pages/admin/Category/CategoryUpdate";
+import PostCreate from "./pages/admin/Post/PostCreate";
+import PostUpdate from "./pages/admin/Post/PostUpdate";
 // import các page khác nếu có
 
 const router = createBrowserRouter([
+  { path: "/", index: true, element: <Navigate to={"client"} /> },
   {
-    path: "/",
+    path: "/client",
     element: <ClientLayout />,
     children: [
-      // { index: true, element: <Home /> },
+      { index: true, element: <Navigate to={"home"} replace /> },
+      { path: "home", element: <Home /> },
       // { path: "product/:id", element: <ProductDetail /> }
     ],
   },
@@ -33,13 +42,17 @@ const router = createBrowserRouter([
       { path: "dashboard", element: <DashBoard /> },
       { path: "products", element: <ProductList /> },
       { path: "products/create", element: <ProductCreate /> },
-      { path: "products/:id", element: <ProductUpdate /> },
+      { path: "products/update/:id", element: <ProductUpdate /> },
       { path: "categories", element: <CategoryList /> },
-      // { path: "category/add", element: <CategoryAdd /> },
-      // { path: "category/:id", element: <CategoryUpdate /> },
+      { path: "categories/create", element: <CategoryCreate /> },
+      { path: "categories/update/:id", element: <CategoryUpdate /> },
       { path: "users", element: <UserList /> },
       { path: "brands", element: <BrandList /> },
+      { path: "brands/create", element: <BrandCreate /> },
+      { path: "brands/update/:id", element: <BrandUpdate /> },
       { path: "posts", element: <PostList /> },
+      { path: "posts/create", element: <PostCreate /> },
+      { path: "posts/update/:id", element: <PostUpdate /> },
     ],
   },
 ]);

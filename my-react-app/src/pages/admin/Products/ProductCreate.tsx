@@ -12,31 +12,33 @@ import {
 import { useForm } from "antd/es/form/Form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import type { Product } from "../../../Types/Product.type";
+import { useMutation } from "@tanstack/react-query";
+import { useCreate } from "../../../hooks/useCreate";
 const { Option } = Select;
 
-export type Product = {
-  id?: number;
-  product_name: string;
-  price: number;
-  description: string;
-  category: "Dép" | "Giày thể thao" | "Giày tây";
-  stock: number;
-  image: string;
-};
 const ProductCreate = () => {
   const nav = useNavigate();
   const [form] = Form.useForm();
-  const onFinish = async (values: Product) => {
-    try {
-      await axios.post("http://localhost:3001/products", values);
-      nav("/admin/products");
-      message.success("Thêm dữ liệu thành công");
-    } catch (error) {
-      message.error("Lỗi rồi !!");
-    }
-    // console.log("Dữ liệu lấy được từ form:", values);
-  };
 
+  // const addProduct = async (values: Product) => {
+  //   return await axios.post("http://localhost:3001/products", values);
+  // };
+
+  // const { mutate } = useMutation({
+  //   mutationFn: async (values: Product) => {
+  //     return await axios.post("http://localhost:3001/products", values);
+  //   },
+  //   onSuccess: () => {
+  //     alert("Thêm thành công");
+  //   },
+  // });
+  const { mutate } = useCreate("products");
+  
+  const handleAdd = (value: Product) => {
+    mutate(value);
+    nav("/admin/products");
+  };
   return (
     <Card
       title="Thêm sản phẩm mới"
@@ -48,7 +50,7 @@ const ProductCreate = () => {
         borderRadius: "8px",
       }}
     >
-      <Form form={form} layout="vertical" onFinish={onFinish}>
+      <Form form={form} layout="vertical" onFinish={handleAdd}>
         <Form.Item
           label="Tên sản phẩm"
           name="product_name"

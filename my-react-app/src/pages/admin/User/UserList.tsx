@@ -2,26 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 import { Button, Table } from "antd";
 import axios from "axios";
 import React from "react";
-
-interface User {
-  id: number;
-  name: string;
-  password: string;
-  age: number;
-  role: string;
-}
-
-const fetchUser = async () => {
-  const respone = await axios.get("http://localhost:3001/user");
-  return respone.data;
-};
+import type { User } from "../../../Types/User.type";
 
 const UserList = () => {
-  const {
-    data: users,
-    isLoading,
-    error,
-  } = useQuery({
+  const fetchUser = async () => {
+    const respone = await axios.get("http://localhost:3001/user");
+    return respone.data;
+  };
+  const { data: users, isLoading } = useQuery({
     queryKey: ["Users"],
     queryFn: fetchUser,
   });
@@ -42,6 +30,11 @@ const UserList = () => {
       key: "password",
     },
     {
+      title: "Email",
+      dataIndex: "email",
+      key: "email",
+    },
+    {
       title: "Age",
       dataIndex: "age",
       key: "age",
@@ -51,10 +44,12 @@ const UserList = () => {
       key: "action",
       render: (_: any, record: User) => (
         <div>
-            <Button type="link">Sửa</Button>
-            <Button type="link" danger>Xóa</Button>
+          <Button type="link">Sửa</Button>
+          <Button type="link" danger>
+            Xóa
+          </Button>
         </div>
-      )
+      ),
     },
   ];
   return (

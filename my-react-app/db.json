@@ -1,89 +1,57 @@
 {
   "products": [
     {
-      "id": "5",
-      "product_name": "Sandal Nữ Quai Chéo",
-      "price": 320000,
-      "description": "Phong cách Hàn Quốc, thoáng mát cho mùa hè.",
-      "category": "Dép nữ",
-      "stock": 25,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw2xMc7zUIBscVV9L6CrUUE74Jht7hYj9paQ&s"
-    },
-    {
-      "id": "6",
-      "product_name": "Giày Tây Nam Da Bò",
-      "price": 850000,
-      "description": "Chất liệu da bò thật, phong cách lịch lãm cho công sở.",
-      "category": "Giày tây nam",
-      "stock": 8,
-      "image": "https://decistore.vn/wp-content/uploads/2019/09/DB-14-2.jpg"
-    },
-    {
-      "id": "4129",
-      "product_name": "Giày Nike airforce 1",
-      "price": 2000000,
-      "description": "Giày Bền chất lượng cao chính hãng",
-      "image": "https://cdn-images.farfetch-contents.com/19/30/28/51/19302851_42366110_600.jpg",
+      "product_name": "Nike Air Force 1 '07 LX update dddvs",
+      "price": 3591000,
+      "description": "Women's Shoes",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ab0eea11-b4de-4eb8-9bde-dfe6cee58ae5/WMNS+AIR+FORCE+1+%2707+LX.png",
       "category": "Giày thể thao",
-      "stock": true
+      "stock": false,
+      "id": "1ad3"
     },
     {
-      "id": "afa1",
-      "product_name": "Giày Nike airforce 1",
-      "price": 111111111111111,
-      "description": "1111111",
-      "image": "https://cdn-images.farfetch-contents.com/19/30/28/51/19302851_42366110_600.jpg",
-      "category": "Giày tây",
-      "stock": true
-    },
-    {
-      "id": "373b",
-      "product_name": "Giày Nike airforce 1",
-      "price": 1111111,
-      "description": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "image": "https://nhasachphuongnam.com/images/detailed/217/dac-nhan-tam-bc.jpg",
+      "id": "b73d",
+      "product_name": "Air Jordan 1 Mid",
+      "price": 3666000,
+      "description": "Men's Shoes",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/96452849-3aba-4455-9a3d-3dfd60f79b39/AIR+JORDAN+1+MID.png",
       "category": "Giày thể thao",
-      "stock": true
+      "stock": false
+    },
+    {
+      "product_name": "Jumpman MVP",
+      "price": 3879000,
+      "description": "Men's Shoes",
+      "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a2c0aacb-cc69-4d22-9e38-1fdec87e3bf9/JORDAN+MVP.png",
+      "category": "Giày thể thao",
+      "stock": false,
+      "id": "a3bb"
     }
   ],
   "brands": [
     {
-      "id": "1",
-      "name": "Nike",
-      "logo": "https://inkythuatso.com/uploads/images/2021/11/logo-nike-inkythuatso-2-01-04-15-42-44.jpg",
-      "country": "USA",
-      "founded": 1964
-    },
-    {
-      "id": "2",
-      "name": "Adidas",
-      "logo": "https://saigonsneaker.com/wp-content/uploads/2020/01/adidas-3-la.jpg",
-      "country": "Germany",
-      "founded": 1949
-    },
-    {
-      "id": "3",
-      "name": "Vans",
+      "name": "Vans Update",
       "logo": "https://drake.vn/image/catalog/H%C3%ACnh%20content/logo-vans/vans-logo_2.jpg",
       "country": "USA",
-      "founded": 1966
+      "founded": 1966,
+      "id": "3"
     },
     {
-      "id": "4",
-      "name": "Bitis",
-      "logo": "https://i.pinimg.com/736x/e9/47/14/e9471439ec9b636be81a7d43ad23e540.jpg",
-      "country": "Vietnam",
-      "founded": 1982
+      "name": "CONVERSE update",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Converse_logo.svg/1000px-Converse_logo.svg.png",
+      "country": "USA",
+      "founded": 1908,
+      "id": "7"
+    },
+    {
+      "name": "MLB update",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Major_League_Baseball_logo.svg/2560px-Major_League_Baseball_logo.svg.png",
+      "country": "USA",
+      "founded": 1968,
+      "id": "29c9"
     }
   ],
   "categories": [
-    {
-      "id": "1",
-      "name": "Giày thể thao",
-      "image": "https://example.com/images/sport-shoes.jpg",
-      "description": "Giày sneaker, running, gym,...",
-      "status": true
-    },
     {
       "id": "2",
       "name": "Giày tây",
@@ -111,36 +79,29 @@
       "id": "1",
       "name": "Nguyen Van A",
       "password": "123456",
+      "email": "example@gmail.com",
       "age": 25
     },
     {
       "id": "2",
       "name": "Le Thi B",
       "password": "matkhau123",
+      "email": "example2@gmail.com",
       "age": 22
     },
     {
       "id": "3",
       "name": "Tran Van C",
       "password": "giaydep2024",
+      "email": "example3@gmail.com",
       "age": 30
     }
   ],
   "post": [
     {
-      "id": 1,
-      "title": "Giới thiệu về React",
-      "content": "React là thư viện JavaScript để xây dựng giao diện người dùng."
-    },
-    {
-      "id": 2,
-      "title": "Tìm hiểu về Node.js",
-      "content": "Node.js cho phép chạy JavaScript trên server."
-    },
-    {
-      "id": 3,
-      "title": "Sử dụng Axios trong React",
-      "content": "Axios là thư viện dùng để gọi API dễ dàng trong ứng dụng React."
+      "title": "Giầy Thượng Đình bị nghi ngờ khả năng hoạt động liên tục uppdate",
+      "content": "Lỗ lũy kế đến cuối năm ngoái hơn 67 tỷ đồng, nợ ngắn hạn vượt tài sản ngắn hạn khiến Giầy Thượng Đình bị Công ty kiểm toán CPA Việt Nam nghi ngờ khả năng hoạt động liên tục. ",
+      "id": "1f10"
     }
   ]
 }

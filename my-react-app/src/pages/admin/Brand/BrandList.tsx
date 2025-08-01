@@ -1,35 +1,37 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Button, Table } from "antd";
 import axios from "axios";
 import React from "react";
-
-interface Brand {
-  id: number;
-  name: string;
-  country: string;
-  logo: string;
-  founded: number;
-}
-
-const fetchBrand = async () => {
-  const respone = await axios.get("http://localhost:3001/brands");
-  return respone.data;
-};
+import { Link } from "react-router-dom";
+import type { Brand } from "../../../Types/Brand.type";
 
 const BrandList = () => {
-  const {
-    data: brands,
-    isLoading,
-    error,
-  } = useQuery({
+  const queryClient = useQueryClient();
+  const fetchBrand = async () => {
+    const respone = await axios.get("http://localhost:3001/brands");
+    return respone.data;
+  };
+  const { data: brands, isLoading } = useQuery({
     queryKey: ["brands"],
     queryFn: fetchBrand,
   });
+
+  const handleDelete = async (id: any) => {
+    return await axios.delete(`http://localhost:3001/brands/${id}`);
+  };
+
+  const { mutate } = useMutation({
+    mutationFn: handleDelete,
+    onSuccess: () => {
+      alert("Xóa thành công");
+      queryClient.invalidateQueries({ queryKey: ["brands"] });
+    },
+  });
   const columns = [
     {
-      title: "STT",
+      title: "ID",
       dataIndex: "id",
-      key: "id",
+      render: (_: any, __: any, index: number) => index + 1,
     },
     {
       title: "Name",
@@ -63,8 +65,19 @@ const BrandList = () => {
       key: "action",
       render: (_: any, record: Brand) => (
         <div style={{ display: "flex", gap: 8 }}>
-          <Button type="link">Sửa</Button>
-          <Button type="link" danger>
+          <Link to={`/admin/brands/update/${record.id}`} type="link">
+            Sửa
+          </Link>
+          <Button
+            type="link"
+            danger
+            onClick={() => {
+              const isConfirm = window.confirm("Bạn có chắc muốn xóa không ?");
+              if (isConfirm) {
+                mutate(record.id);
+              }
+            }}
+          >
             Xóa
           </Button>
         </div>
@@ -74,6 +87,15 @@ const BrandList = () => {
   return (
     <>
       <div>
+        <div>
+          <Link
+            to={"/admin/brands/create"}
+            type="dashed"
+            style={{ margin: 30 }}
+          >
+            Thêm Thương hiệu
+          </Link>
+        </div>
         <Table
           dataSource={brands}
           columns={columns}

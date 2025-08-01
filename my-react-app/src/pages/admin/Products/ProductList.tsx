@@ -1,40 +1,38 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { Button, Table } from "antd";
 import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
-
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-}
+import type { Product } from "../../../Types/Product.type";
+import { useList } from "../../../hooks/useList";
+import { useDelete } from "../../../hooks/useDelete";
 
 const ProductList = () => {
-  const fetchProduct = async () => {
-    const res = await axios.get("http://localhost:3001/products");
-    return res.data;
-  };
+  const queryClient = useQueryClient();
+  // const fetchProduct = async (): Promise<Product[]> => {
+  //   const res = await axios.get("http://localhost:3001/products");
+  //   return res.data;
+  // };
 
-  const {
-    data: products,
-    isLoading,
-    error,
-    refetch,
-  } = useQuery({
-    queryKey: ["products"],
-    queryFn: fetchProduct,
-  });
+  // const { data: products, isLoading } = useQuery({
+  //   queryKey: ["products"],
+  //   queryFn: fetchProduct,
+  // });
+
+  const { data: products, isLoading } = useList("products");
+  const { mutate } = useDelete("products");
+
+  const handleDelete = async (id: any) => {
+    if (window.confirm("Bạn có chắc muốn xóa")) {
+      mutate(id);
+    }
+  };
 
   const columns = [
     {
       title: "STT",
-      dataIndex: "id",
-      key: "id",
-      sorter: (a: Product, b: Product) => a.id - b.id, // Sắp xếp theo ID
+      key: "stt",
+      render: (_: any, __: any, index: number) => index + 1, // Sắp xếp theo index
     },
     {
       title: "Tên sản phẩm",
@@ -66,15 +64,21 @@ const ProductList = () => {
       key: "description",
     },
     {
+      title: "Tình trạng",
+      dataIndex: "stock",
+      key: "stock",
+      render: (stock: boolean) => (stock ? "Còn hàng" : "Hết hàng"),
+    },
+    {
       title: "Hành động",
       dataIndex: "id",
       key: "action",
       render: (_: any, record: Product) => (
         <div style={{ display: "flex", gap: 8 }}>
-          <Link to={`/admin/products/${record.id}`} type="link">
+          <Link to={`/admin/products/update/${record.id}`} type="link">
             Sửa
           </Link>
-          <Button type="link" danger>
+          <Button type="link" danger onClick={() => handleDelete(record.id)}>
             Xóa
           </Button>
         </div>
